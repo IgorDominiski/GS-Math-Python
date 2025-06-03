@@ -1,115 +1,77 @@
-📊 Monitoramento do Nível do Rio Tietê — Modelagem Polinomial e Alerta de Enchentes
+# Análise de Níveis do Rio Tietê
 
-🔍 Descrição do Projeto
+Este projeto realiza uma análise matemática dos níveis do Rio Tietê, utilizando dados simulados para demonstrar conceitos de análise de funções e visualização de dados.
 
-Este projeto foi desenvolvido para simular o monitoramento do nível do Rio Tietê durante 10 dias consecutivos de chuva intensa, com o objetivo de prever situações de risco de enchente.
+## 📊 Sobre o Projeto
 
-Utilizamos modelagem polinomial para aproximar os dados e gerar uma função matemática que representa o comportamento do rio ao longo dos dias. A visualização dos dados permite destacar níveis críticos, auxiliando no planejamento de evacuação e emissão de alertas.
+O código implementa uma análise matemática dos níveis do Rio Tietê ao longo de 10 dias, incluindo:
+- Visualização dos dados em gráfico
+- Identificação de pontos críticos
+- Análise de dias com risco de enchente
+- Ajuste polinomial cúbico para modelagem dos dados
 
-📈 Explicação Matemática
+## 📈 Dados Utilizados
 
-🔹 1. Modelagem Polinomial
-Utilizamos um polinômio de grau 3 (forma cúbica) para ajustar os dados de nível do rio:
+Os dados utilizados neste projeto são simulados para fins educacionais. Os níveis do rio são representados em metros, com um período de monitoramento de 10 dias. Os dados incluem:
+- Níveis variando de 0.5m a 2.6m
+- Identificação de dias com risco de enchente (níveis acima de 2.0m)
+- Ponto máximo de enchente no dia 8, com 2.6m
 
-f
-(
-x
-)
-=
-a
-x
-3
-+
-b
-x
-2
-+
-c
-x
-+
-d
-f(x)=ax 
-3
- +bx 
-2
- +cx+d
-Esse tipo de polinômio é ideal para comportamentos que crescem, se estabilizam ou diminuem ao longo do tempo — como é o caso do nível de um rio durante uma sequência de dias chuvosos.
+## 🚀 Como Executar
 
-Os coeficientes 
-a
-,
-b
-,
-c
-,
-d
-a,b,c,d são calculados automaticamente com a função polyfit da biblioteca NumPy, com base nos 10 pontos de dados simulados.
+### Pré-requisitos
+- Python 3.x
+- Bibliotecas necessárias:
+  - numpy
+  - matplotlib
 
-🔹 2. Domínio e Imagem da Função
-Domínio: Dias analisados → 
-x
-∈
-[
-1
-,
-10
-]
-x∈[1,10]
-Imagem: Intervalo dos níveis do rio durante o período → 
-y
-∈
-[
-0.5
-,
-2.6
-]
- 
-(em metros)
-y∈[0.5,2.6](em metros)
-🔹 3. Ponto Máximo
-O ponto máximo da função é o dia em que o nível do rio atinge o valor mais alto (neste caso, 2.6 metros). Esse ponto é identificado automaticamente pelo código com:
+### Instalação
 
-np.argmax(niveis)
-🔹 4. Critério de Risco de Enchente
-Consideramos que há risco de enchente sempre que o nível do rio ultrapassa 2 metros. O código marca esses pontos em vermelho no gráfico e imprime os dias de risco.
+1. Clone este repositório:
+```bash
+git clone [URL_DO_REPOSITÓRIO]
+```
 
-🧪 Dados Utilizados
+2. Instale as dependências:
+```bash
+pip install numpy matplotlib
+```
 
-Os dados foram simulados com base em estudos reais sobre o comportamento do Rio Tietê em épocas de chuva intensa. Cada valor representa o nível do rio em metros ao final de cada um dos 10 dias consecutivos:
+3. Execute o script:
+```bash
+python enchente.py
+```
 
-Dia	Nível do Rio (m)
-1	0.5
-2	0.8
-3	1.2
-4	1.5
-5	2.0
-6	2.3
-7	2.5
-8	2.6
-9	2.4
-10	2.1
-▶️ Como Executar
+## 👥 Autores
 
-📋 Requisitos
-Python 3.x
-Bibliotecas: matplotlib e numpy
-🛠️ Instalar as bibliotecas
-pip install matplotlib numpy
-🏃 Rodar o código
-Copie o código Python para um arquivo chamado monitoramento_tiete.py
-No terminal, vá até a pasta onde o arquivo está salvo:
-cd caminho/da/sua/pasta
-Execute:
-python monitoramento_tiete.py
-👥 Autores
+[Adicione aqui os nomes dos 3 autores do código]
 
-Nome do Autor 1 — RA/ID
-Nome do Autor 2 — RA/ID
-Nome do Autor 3 — RA/ID
-🎥 Vídeo Demonstrativo
+## 🎥 Demonstração
 
-➡️ Clique aqui para assistir ao vídeo
+[Adicione aqui o link para o vídeo demonstrativo]
 
-✅ Conclusão
+## 📝 Notas Técnicas
 
-A modelagem polinomial é uma ferramenta poderosa para antecipar comportamentos naturais com base em dados. Neste projeto, ela auxilia na previsão de enchentes a partir do comportamento do rio, permitindo a emissão de alertas antecipados e o planejamento de ações preventivas em áreas de risco.
+O código implementa:
+1. Análise do domínio e imagem da função
+2. Identificação do ponto máximo
+3. Detecção de dias com risco de enchente
+4. Ajuste polinomial cúbico para modelagem dos dados
+5. Visualização gráfica com:
+   - Dados reais
+   - Curva de ajuste polinomial
+   - Pontos de risco
+   - Linha de limite de risco
+   - Ponto máximo destacado
+
+## 📚 Conceitos Matemáticos Utilizados
+
+- Funções polinomiais
+- Análise de domínio e imagem
+- Máximos e mínimos
+- Ajuste de curvas
+- Visualização de dados
+
+## 📄 Licença
+
+Este projeto está sob a licença [Adicione aqui a licença escolhida] 
