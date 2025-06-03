@@ -10,6 +10,15 @@ O código implementa uma análise matemática dos níveis do Rio Tietê ao longo
 - Análise de dias com risco de enchente
 - Ajuste polinomial cúbico para modelagem dos dados
 
+## 📚 Conceitos Matemáticos Utilizados
+
+- Funções polinomiais
+- Análise de domínio e imagem
+- Máximos e mínimos
+- Ajuste de curvas
+- Visualização de dados
+
+
 ## 📈 Dados Utilizados
 
 Os dados utilizados neste projeto são simulados para fins educacionais. Os níveis do rio são representados em metros, com um período de monitoramento de 10 dias. Os dados incluem:
@@ -29,7 +38,7 @@ Os dados utilizados neste projeto são simulados para fins educacionais. Os nív
 
 1. Clone este repositório:
 ```bash
-git clone [URL_DO_REPOSITÓRIO]
+git clone [GS-Math-Python]
 ```
 
 2. Instale as dependências:
@@ -44,11 +53,11 @@ python enchente.py
 
 ## 👥 Autores
 
-[Adicione aqui os nomes dos 3 autores do código]
+Igor Dominiski, Murilo Reis, Murillo Akira
 
 ## 🎥 Demonstração
 
-[Adicione aqui o link para o vídeo demonstrativo]
+https://youtu.be/xA7GLfTQbHs
 
 ## 📝 Notas Técnicas
 
@@ -63,15 +72,89 @@ O código implementa:
    - Pontos de risco
    - Linha de limite de risco
    - Ponto máximo destacado
+  
+## 📊 Memorial Descritivo e Análise Matemática
 
-## 📚 Conceitos Matemáticos Utilizados
+### Modelo Matemático Utilizado
 
-- Funções polinomiais
-- Análise de domínio e imagem
-- Máximos e mínimos
-- Ajuste de curvas
-- Visualização de dados
+O projeto utiliza um modelo polinomial cúbico (grau 3) para modelar o comportamento dos níveis do Rio Tietê. Este modelo foi escolhido por sua capacidade de capturar tanto tendências quanto variações locais nos dados.
 
-## 📄 Licença
+#### Equação do Modelo
+O ajuste polinomial cúbico é representado pela equação:
+```
+f(x) = ax³ + bx² + cx + d
+```
+onde:
+- x representa o dia de monitoramento
+- f(x) representa o nível do rio em metros
+- a, b, c, d são os coeficientes determinados pelo método dos mínimos quadrados
 
-Este projeto está sob a licença [Adicione aqui a licença escolhida] 
+### Análise dos Dados
+
+#### Tabela de Níveis do Rio
+| Dia | Nível (m) | Status |
+|-----|-----------|---------|
+| 1   | 0.5       | Normal  |
+| 2   | 0.8       | Normal  |
+| 3   | 1.2       | Normal  |
+| 4   | 1.5       | Normal  |
+| 5   | 2.0       | Risco   |
+| 6   | 2.3       | Risco   |
+| 7   | 2.5       | Risco   |
+| 8   | 2.6       | Risco   |
+| 9   | 2.4       | Risco   |
+| 10  | 2.1       | Risco   |
+
+#### Interpretação dos Resultados
+
+1. **Domínio e Imagem**
+   - Domínio: [1, 10] dias
+   - Imagem: [0.5, 2.6] metros
+   - Esta análise permite identificar o período de monitoramento e a faixa de variação dos níveis
+
+2. **Pontos Críticos**
+   - Ponto máximo: Dia 8 com 2.6m
+   - Dias com risco de enchente: 5 dias consecutivos (dias 5-10)
+   - Limite de risco: 2.0m
+
+3. **Tendências Identificadas**
+   - Crescimento inicial: dias 1-4 (0.5m → 1.5m)
+   - Período crítico: dias 5-8 (2.0m → 2.6m)
+   - Tendência de queda: dias 8-10 (2.6m → 2.1m)
+
+### Aplicação no Sistema de Alerta de Enchentes
+
+O modelo matemático desenvolvido pode ser utilizado como ferramenta de previsão e alerta de enchentes através de:
+
+1. **Previsão de Tendências**
+   - O ajuste polinomial permite extrapolar tendências futuras
+   - Identificação precoce de períodos de risco
+   - Estimativa do tempo até atingir níveis críticos
+
+2. **Classificação de Risco**
+   - Nível Normal: < 2.0m
+   - Nível de Risco: ≥ 2.0m
+   - Ponto Crítico: ≥ 2.5m
+
+3. **Benefícios do Sistema**
+   - Monitoramento contínuo dos níveis
+   - Alertas antecipados para autoridades
+   - Base para decisões de evacuação
+   - Planejamento de ações preventivas
+
+4. **Limitações e Considerações**
+   - Dados simulados para fins educacionais
+   - Necessidade de calibração com dados reais
+   - Consideração de fatores externos (chuva, maré, etc.)
+   - Atualização constante do modelo
+
+### Recomendações para Implementação Real
+
+Para uma implementação real do sistema, recomenda-se:
+1. Coleta de dados históricos reais
+2. Calibração do modelo com dados locais
+3. Integração com estações meteorológicas
+4. Desenvolvimento de interface para monitoramento em tempo real
+5. Estabelecimento de protocolos de alerta
+
+
