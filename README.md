@@ -53,7 +53,7 @@ python enchente.py
 
 ## 👥 Autores
 
-Igor Dominiski, Murilo Reis, Murillo Akira
+Igor Dominiski RM562055, Murilo Reis RM564053, Murillo Akira RM561806
 
 ## 🧪 Simulação no Wokwi
 
