@@ -55,6 +55,11 @@ python enchente.py
 
 Igor Dominiski, Murilo Reis, Murillo Akira
 
+## 🧪 Simulação no Wokwi
+
+### ▶️ Acesse a simulação diretamente:
+[🔗 Projeto no Wokwi](https://wokwi.com/projects/432129309991925761)
+
 ## 🎥 Demonstração
 
 https://youtu.be/xA7GLfTQbHs
@@ -105,9 +110,7 @@ onde:
 | 10      | 1.5                  |           |
 
 ```
-y=−0,07x 
-2
- +0,8x+0,2
+y=−0,07x²+0,8x+0,2
 ```
 
 
