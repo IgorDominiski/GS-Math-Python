@@ -87,7 +87,7 @@ O projeto utiliza um modelo polinomial cúbico (grau 3) para modelar o comportam
 #### Equação do Modelo
 O ajuste polinomial cúbico é representado pela equação:
 ```
-f(x) = ax³ + bx² + cx + d
+f(x) = ax² + bx + c
 ```
 onde:
 - x representa o dia de monitoramento
