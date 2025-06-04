@@ -94,23 +94,22 @@ onde:
 - f(x) representa o nível do rio em metros
 - a, b, c, d são os coeficientes determinados pelo método dos mínimos quadrados
 
-### Análise dos Dados
-
-| Dia (x) | Nível do Rio (m) (y) |           |
-| ------- | -------------------- | --------- |
-| 1       | 0.8                  |           |
-| 2       | 1.2                  |           |
-| 3       | 1.7                  |           |
-| 4       | 2.3                  |           |
-| 5       | 2.8                  |           |
-| 6       | 3.0                  | ⚠️ Máximo |
-| 7       | 2.9                  |           |
-| 8       | 2.5                  |           |
-| 9       | 2.0                  |           |
-| 10      | 1.5                  |           |
+#### Tabela de Níveis do Rio
+| Dia | Nível (m) | Status |
+|-----|-----------|---------|
+| 1   | 0.5       | Normal  |
+| 2   | 0.8       | Normal  |
+| 3   | 1.2       | Normal  |
+| 4   | 1.5       | Normal  |
+| 5   | 2.0       | Risco   |
+| 6   | 2.3       | Risco   |
+| 7   | 2.5       | Risco   |
+| 8   | 2.6       | Risco   |
+| 9   | 2.4       | Risco   |
+| 10  | 2.1       | Risco   |
 
 ```
-y=−0,07x²+0,8x+0,2
+f(x)=-0.08 x^(2)+0.1 x+0.3
 ```
 
 
